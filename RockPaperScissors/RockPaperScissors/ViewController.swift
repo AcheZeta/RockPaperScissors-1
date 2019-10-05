@@ -32,10 +32,24 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickPaper(_ sender: Any) {
-        print("Papel")
+        let computerSign = randomSign()
+        print(computerSign.emoji)
+        
+        let paper = Sign.paper
+        let result = paper.compare(computerSign)
+        print(result.description)
+        
+        btnPaper.isHidden = true
     }
     @IBAction func clickScissors(_ sender: Any) {
-        print("Tijera")
+        let computerSign = randomSign()
+        print(computerSign.emoji)
+        
+        let scissors = Sign.scissors
+        let result = scissors.compare(computerSign)
+        print(result.description)
+        
+        btnSciss.isHidden = true
     }
 }
 
