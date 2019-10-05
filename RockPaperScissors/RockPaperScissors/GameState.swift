@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import GameplayKit
 
 enum GameState {
     case start, win, lose, tie
     
-    func simpleDescription() -> String {
+    var description: String {
         switch self {
         case .start:
             return "Vamos a jugar"
@@ -24,3 +25,4 @@ enum GameState {
         }
     }
 }
+

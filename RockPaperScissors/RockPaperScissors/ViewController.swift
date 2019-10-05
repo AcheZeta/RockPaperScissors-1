@@ -21,7 +21,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     @IBAction func clickRock(_ sender: Any) {
-    print("Piedra")
+        let computerSign = randomSign()
+        print(computerSign.emoji)
+        
+        let rock = Sign.rock
+        let result = rock.compare(computerSign)
+        print(result.description)
+        
+        btnRock.isHidden = true
     }
     
     @IBAction func clickPaper(_ sender: Any) {
